@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +10,21 @@
 </head>
 <body>
     <header>
-        <img width="200rem" width="200em" src="./img/logoTupperGuard.png" alt="logoTupperGuard.png"> <!-- Agrega la imagen del logo -->
-        <i onclick="handleClick()" id="chango" class="fa-solid fa-cart-shopping"></i> <!-- Agrega el icono del carrito utilizando Font Awesome -->
+        <div class="logo-titulo">
+            <img src="./img/logoTupperGuard.png" alt="logoTupperGuard" width="120rem">
+        </div>
+
+        <div class="acciones">
+            <a href="./quienesSomos.html" class="nav-btn" id="quienes">¿Quiénes somos?</a>
+            <a href="./funcionamiento.html" class="nav-btn" id="funcionamiento">Funcionamiento</a>
+            <i onclick="handleClick()" id="chango" class="fa-solid fa-cart-shopping"></i>
+        </div>
     </header>
-    <h1>TupperGuard</h1>
+
+    <main>
+        <h1>TupperGuard</h1>
     
-    <div id="muestras">
+        <section id="muestras">
             <h2>Ofrecemos productos de excelente calidad</h2>
             <div id="container">
                 <img src="./img/tupperNegro.png"  alt="tupper negro">
@@ -25,10 +34,9 @@
                 <img src="./img/tupperAzul.png"   alt="tupper azul">
                 <img src="./img/tupperVerde.png"  alt="tupper verde">
             </div>                 
-    </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>¿Quienes somos?</p>
-    </footer>
+    <script src="./js/main.js"></script>
 </body>
-<script src="./js/main.js"></script>
+</html>
