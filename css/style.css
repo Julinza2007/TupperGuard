@@ -1,77 +1,119 @@
+/* === ESTILOS GENERALES === */
 body {
     margin: 0;
     background-image: url(../img/hamburguesa.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 80vh; */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h1{
+h1 {
     background-color: black;
-    display: inline-block;
     color: white;
-    /* padding: 0.2rem 0.5rem; */
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    margin: 2rem auto;
+    font-size: 2.5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#muestras {
-    background-color: red;
-    padding: 2rem;
-    border-radius: 1rem;
-    margin: 0 auto;
-  }
-  
-  /* La grilla real la hace #container */
-  #muestras #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;   /* centra horizontalmente las filas */
-    gap: 2rem;
-    max-width: 1100px;         /* opcional para que aparezcan 3 por fila cómodos */
-    margin: 0 auto;
-  }
-  
-  #muestras #container img {
-    width: 30%;       /* ~3 por fila */
-    height: auto;
-    display: block;
-    border-radius: 1em;
-    transition: transform 0.3s ease-in-out;
-  }
 
-#muestras img:hover {
-    transform: scale(1.2);
-}
-
-header{
+/* === HEADER === */
+header {
     background-color: whitesmoke;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    /* border-bottom: solid red; */
-    /* margin-bottom: 80vh; */
+    align-items: stretch;
+    border-bottom: solid red 2px;
+    height: 120px;
+    padding: 0 2rem;
 }
 
-footer{
-    background-color: whitesmoke;
+.logo-titulo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    border-top: solid red;
-    /* padding-top: 100px; */
-    padding-top: 5rem;
-    
 }
 
-i#chango{
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Botones del header */
+.nav-btn {
+    background-color: rgb(184, 14, 14);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 0;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 100%;
+}
+
+#funcionamiento:hover {
+    transform: scale(1.1);
+    background-color: rgb(245, 198, 46);
+}
+#quienes:hover {
+    transform: scale(1.1);
+    background-color: rgb(4, 41, 143);
+}
+/* Icono carrito */
+i#chango {
     font-size: 2em;
     padding: 0.5em;
-    margin-right: 1em;
     border: 2px solid black;
     border-radius: 50%;
     transition: transform 0.3s ease-in-out;
+    background-color: white;
 }
 
-i#chango:hover{
+i#chango:hover {
     cursor: pointer;
+    transform: scale(1.2);
+}
+
+/* === SECCIÓN MUESTRAS === */
+#muestras {
+    background-color: rgb(184, 14, 14);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#muestras h2 {
+    color: white;
+    text-align: center;
+}
+
+#muestras #container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#muestras #container img {
+    width: 30%;
+    height: auto;
+    border-radius: 1em;
+    transition: transform 0.3s ease-in-out;
+}
+
+#muestras img:hover {
     transform: scale(1.2);
 }
