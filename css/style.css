@@ -1,7 +1,72 @@
-header{
+body {
+    margin: 0;
+    background-image: url(../img/hamburguesa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+}
+
+h1{
+    background-color: black;
+    display: inline-block;
+    color: white;
+    padding: 0.2rem 0.5rem;
+}
+
+div#muestras {
+    background-color: white;
+    width: 100rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    border-radius: 1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    border-bottom: solid red;
-    padding-bottom: 100px;
+    gap: 2rem; /* espacio entre imágenes */
+    margin: 0 auto; /* centra el conjunto */
+}
+
+#muestras img {
+    width: 30rem;
+    height: 20rem;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 1em;
+}
+
+#muestras img:hover {
+    transform: scale(1.2);
+}
+
+header{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: solid red; */
+    margin-bottom: 80vh;
+}
+
+footer{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid red;
+    /* padding-top: 100px; */
+    padding-top: 5rem;
+    
+}
+
+i#chango{
+    font-size: 2em;
+    padding: 0.5em;
+    margin-right: 1em;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+i#chango:hover{
+    cursor: pointer;
+    transform: scale(1.2);
 }
