@@ -3,25 +3,35 @@ body {
     background-image: url(../img/hamburguesa.png);
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 80vh; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1{
-    background-color: black;
     display: inline-block;
-    color: white;
+    color: black;
     /* padding: 0.2rem 0.5rem; */
 }
 
-#muestras {
-    background-color: red;
-    padding: 2rem;
-    border-radius: 1rem;
-    margin: 0 auto;
-  }
+
+
+
+h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+div#muestras {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1100px;      /* o 1200px, lo que prefieras */
+  width: 90%;             /* para que en móviles no quede enorme */
+  margin: 2rem auto;      /* centra el bloque */
+}
+
   
   /* La grilla real la hace #container */
-  #muestras #container {
+div#muestras div#container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;   /* centra horizontalmente las filas */
@@ -30,7 +40,7 @@ h1{
     margin: 0 auto;
   }
   
-  #muestras #container img {
+div#muestras div#container img {
     width: 30%;       /* ~3 por fila */
     height: auto;
     display: block;
@@ -49,6 +59,15 @@ header{
     align-items: center;
     /* border-bottom: solid red; */
     /* margin-bottom: 80vh; */
+}
+
+header img{
+    width: 10%;
+    height: auto;
+}
+
+h2#queEs{
+    color: white;
 }
 
 footer{
