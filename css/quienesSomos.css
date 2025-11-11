@@ -79,3 +79,28 @@ footer p {
 .redes a:hover i {
   color: rgb(184, 14, 14);
 }
+
+@media (max-width: 800px) {
+  .contenido {
+    padding: 4rem 3rem;
+  }
+
+ footer .redes{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .contenido {
+    padding: 4rem 2rem;
+  }
+
+  .contenido p{
+    font-size: 1.2em;
+  }
+
+  footer .redes{
+    flex-direction: column;
+  }
+}

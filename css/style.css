@@ -4,6 +4,7 @@ body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url(../img/fondo.png);
   background-size: cover; /* Fondo ajustado a pantalla */
+
 }
 
 /* HEADER */
@@ -114,10 +115,109 @@ header{
 }
 
 /* Adaptación a pantallas pequeñas */
-@media (max-width: 56rem){
+
+
+@media (max-width: 1280px){
   #muestras #container{ grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 34rem){
+@media (max-width: 800px){
+
+    #muestras #container{ grid-template-columns: repeat(2, 1fr); }
+
+
+  .titulo h1{
+    font-size: 2rem;
+  } 
+    
+  header{
+    padding: 0 1rem;     /* antes 2rem */
+    height: auto;        /* libera alto para 2 filas si hace falta */
+    flex-wrap: wrap;     /* permite que los botones bajen */
+    row-gap: .75rem;
+  }
+
+  .logo-titulo img{
+    width: 5.5rem;       /* antes 7.5rem */
+  }
+
+  .acciones{
+    gap: 0.5rem;         /* antes 1.5rem */
+    flex-wrap: wrap;     /* evita overflow por botones largos */
+    justify-content: center;
+  }
+
+  .btnHeader{
+    padding: 0 1rem;     /* antes 0 2rem */
+    height: 2.6rem;      /* un poco más baja */
+    font-size: 1rem;     /* leve reducción */
+  }
+
+  #chango{
+    font-size: 1.6rem;   /* antes 2rem */
+    padding: .5rem;      /* antes 0.7rem */
+  }
+
+  #muestras{
+    padding: 1rem;
+  }
+
+  #muestras #container{
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px){
+
   #muestras #container{ grid-template-columns: 1fr; }
+
+ .titulo h1{
+    font-size: 1.5rem;
+  } 
+
+
+   header{
+    padding: 0 0.3rem;     /* antes 2rem */
+    height: auto;        /* libera alto para 2 filas si hace falta */
+    flex-wrap: wrap;     /* permite que los botones bajen */
+    row-gap: 0.2rem;
+  }
+
+  .acciones{
+    gap: 0.5rem;         /* antes 1.5rem */
+    flex-wrap: wrap;     /* evita overflow por botones largos */
+    justify-content: center;
+  }
+
+  .btnHeader{
+    padding: 0 0.1rem;     /* antes 0 2rem */
+    height: 2.6rem;      /* un poco más baja */
+    font-size: 0.8rem;     /* leve reducción */
+  }
+
+  #chango{
+    font-size: 1.4rem;   /* antes 2rem */
+    padding: .5rem;      /* antes 0.7rem */
+  }
+}
+
+@media (max-width: 400px){
+  .btnHeader{
+    padding: 0 0.1rem;     /* antes 0 2rem */
+    height: 2.6rem;      /* un poco más baja */
+    font-size: 0.6rem;     /* leve reducción */
+  }
+
+.acciones{
+    gap: 0.4rem;         /* antes 1.5rem */
+    flex-wrap: wrap;     /* evita overflow por botones largos */
+    justify-content: center;
+  }
+
+
+  #chango{
+    font-size: 1.1rem;   /* antes 2rem */
+    padding: 0.5rem;      /* antes 0.7rem */
+  }
 }

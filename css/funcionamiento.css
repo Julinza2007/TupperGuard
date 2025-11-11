@@ -3,6 +3,8 @@ body{
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  overflow-x: hidden; /* evita el scroll horizontal */
+
 }
 
 /* Hovers propios (mantienen SOLO transform: scale) */
@@ -236,7 +238,7 @@ main{
 .comparacion-item{
   background: rgba(0,0,0,.05);
   border-radius: .75rem;
-  padding: .75rem;
+  padding: 0.75rem;
   text-align: center;
   box-shadow: 0 .25rem 1rem rgba(0,0,0,.15);
 }
@@ -283,8 +285,50 @@ main{
   color: #d90429; 
 }
 
+
+/*
+
+@media (min-width: 1400px) and (max-width: 1440px) and (max-height: 900px) {
+  main {
+    max-width: none;
+    width: 100%;  
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) and (max-height: 768px) {
+  main {
+    max-width: none;
+    width: 100%;  
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) and (max-height: 720px) {
+  main {
+    max-width: none;
+    width: 100%;  
+  }
+}
+
+*/
+
+/* 2 × 2 a 1280px o menos */
+@media (max-width: 1280px) and (min-width: 801px){
+  .pasos{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 2rem;               /* mantené tu separación */
+  }
+}
+
+
 /* Adaptación móvil */
 @media (max-width: 800px){
-  .intro h1{ font-size: 2rem; }
+  .intro h1{ font-size: 1.5rem; }
   .cta-container{ flex-direction: column; }
+
+main {
+    max-width: none;
+    width: 90%;  /* el contenedor usa todo el ancho */ 
+  }
 }
+
