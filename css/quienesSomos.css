@@ -6,63 +6,6 @@ body {
     color: white;
 }
 
-/* HEADER */
-header {
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    border-bottom: solid white 1px;
-    height: 120px;
-    padding: 0;
-}
-
-/* Logo + título juntos */
-.logo-titulo {
-    display: flex;
-    align-items: stretch; /* hace que el título llene el alto */
-    flex: 1; /* permite que ocupe todo el espacio blanco restante */
-}
-
-/* Logo */
-.logo-titulo img {
-    height: 80%;
-    align-self: center;
-    border-radius: 0.5rem;
-    margin-left: 2rem;
-}
-
-/* Título ocupa todo el alto y ancho disponible */
-h1 {
-    background-color: rgb(4, 41, 143);
-    color: white;
-    margin: 0 1px;
-    font-size: 4rem;
-    height: 100%;
-    width: 99%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: underline; /* subrayado */
-}
-
-/* Botón “Seleccionar producto” */
-.select-btn {
-    background-color: rgb(4, 41, 143);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 0;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    height: 100%;
-}
-
 #producto:hover {
     transform: scale(1.05);
     background-color: rgb(150, 10, 10);
@@ -89,11 +32,15 @@ h1 {
 
 /* FOOTER - Redes sociales */
 footer {
-    background-color: transparent; /* mismo fondo azul del body */
-    padding: 1.5rem 0; /* menos alto para que quede más arriba */
-    margin-top: 2rem;
+    background: whitesmoke;
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+}
+
+footer p {
+    margin: 0;
 }
 
 .redes {
@@ -104,7 +51,7 @@ footer {
 
 /* Enlaces e íconos blancos */
 .redes a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.3rem;
     font-weight: bold;
@@ -122,10 +69,12 @@ footer {
 /* Íconos también blancos */
 .redes i {
     font-size: 1.8rem;
-    color: white;
+    color: black;
     transition: color 0.3s ease-in-out;
 }
 
 .redes a:hover i {
     color: rgb(184, 14, 14);
 }
+
+

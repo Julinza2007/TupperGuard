@@ -1,119 +1,125 @@
-/* === ESTILOS GENERALES === */
-body {
-    margin: 0;
-    background-image: url(../img/hamburguesa.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+/* === BASE === */
+body{
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(../img/fondo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-h1 {
-    background-color: black;
-    color: white;
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    margin: 2rem auto;
-    font-size: 2.5rem;
-    text-align: center;
-    border-radius: 0.5rem;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+header h1{
+    color: black;
 }
 
+/* Título centrado sin transform */
+.titulo { text-align: center; }
+.titulo h1{
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  margin: 2rem auto;
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+}
 
 /* === HEADER === */
-header {
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    border-bottom: solid red 2px;
-    height: 120px;
-    padding: 0 2rem;
+header{
+  background: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 0.125rem solid red; ~2px */
+  padding: 0 2rem;
+  height: 7.5rem; /* ~120px */
 }
+.logo-titulo img{ width: 7.5rem; height: auto; } /* ← en HTML sin width="rem" */
 
-.logo-titulo {
-    display: flex;
-    align-items: center;
-}
-
-.acciones {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+.acciones{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 /* Botones del header */
-.nav-btn {
-    background-color: rgb(184, 14, 14);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-radius: 0;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    height: 100%;
+.btnHeader{
+  background: rgb(184,14,14);
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.2);
+  display: flex; align-items: center; justify-content: center;
+  padding: 0 2rem; height: 3rem; border-radius: 0.25rem;
+  transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+}
+#funcionamiento:hover{ transform: scale(1.08); background: rgb(245,198,46); }
+#quienes:hover{        transform: scale(1.08); background: rgb(4,41,143);  }
+
+/* Carrito */
+#chango{
+  font-size: 2rem;
+  padding: 0.7rem;
+  border: 0.2rem solid #000;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+#chango:hover{ transform: scale(1.2); cursor: pointer; }
+
+/* === CATÁLOGO (Grid 3→2→1) === */
+#muestras{
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  /* NO ocupa todo el ancho */
+  max-width: 70rem;  /* ~1120px */
+  width: 90%;
+  margin: 2rem auto;
+}
+#muestras > h2{
+  color: #111;
+  text-align: center;
+  margin: 0 0 3rem 0;
 }
 
-#funcionamiento:hover {
-    transform: scale(1.1);
-    background-color: rgb(245, 198, 46);
-}
-#quienes:hover {
-    transform: scale(1.1);
-    background-color: rgb(4, 41, 143);
-}
-/* Icono carrito */
-i#chango {
-    font-size: 2em;
-    padding: 0.5em;
-    border: 2px solid black;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-    background-color: white;
+/* Grid simple, bidimensional */
+#muestras #container{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(15rem, 1fr));
+  gap: 2rem;
+  justify-items: center; /* centra cada celda */
 }
 
-i#chango:hover {
-    cursor: pointer;
-    transform: scale(1.2);
+#muestras #container img{
+  width: 100%;          /* que llene su celda */
+  max-width: 20rem;     /* tope visual cómodo */
+  height: auto;
+  display: block;
+  border-radius: .75rem;
+  box-shadow: 0.2rem 0.4rem 1.5rem black;
+  transition: transform 0.3s ease-in-out; /* ← hover intacto con scale */
+}
+#muestras #container img:hover{ transform: scale(1.2); }
+
+/* Responsive simple */
+@media (max-width: 56rem){ /* ~896px → 2 cols */
+  #muestras #container{ grid-template-columns: repeat(2, minmax(15rem, 1fr)); }
+}
+@media (max-width: 34rem){ /* ~544px → 1 col  */
+  #muestras #container{ grid-template-columns: 1fr; }
 }
 
-/* === SECCIÓN MUESTRAS === */
-#muestras {
-    background-color: rgb(184, 14, 14);
-    padding: 2rem;
-    border-radius: 1rem;
-    margin: 0 auto;
-    width: 80%;
+/* === ¿Qué es...? === */
+#queEs{
+  color: #111;
+  background: rgba(255,255,255,.85);
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  max-width: 70rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
 }
 
-#muestras h2 {
-    color: white;
-    text-align: center;
-}
-
-#muestras #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-#muestras #container img {
-    width: 30%;
-    height: auto;
-    border-radius: 1em;
-    transition: transform 0.3s ease-in-out;
-}
-
-#muestras img:hover {
-    transform: scale(1.2);
-}
