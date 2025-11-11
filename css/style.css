@@ -1,18 +1,25 @@
-/* === BASE === */
+/* Estilos generales del sitio */
 body{
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-image: url(../img/fondo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; /* Fondo ajustado a pantalla */
 }
 
-header h1{
-    color: black;
+/* HEADER */
+header{
+  background: whitesmoke;
+  display: flex; /* Distribuye logo, botones e ícono */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  height: 7.5rem;
 }
 
-/* Título centrado sin transform */
-.titulo { text-align: center; }
+.titulo { 
+  text-align: center;
+}
+
 .titulo h1{
   display: inline-block;
   background: #000;
@@ -23,17 +30,10 @@ header h1{
   border-radius: 0.5rem;
 }
 
-/* === HEADER === */
-header{
-  background: whitesmoke;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* border-bottom: 0.125rem solid red; ~2px */
-  padding: 0 2rem;
-  height: 7.5rem; /* ~120px */
+/* Logo en el header */
+.logo-titulo img{
+  width: 7.5rem;
 }
-.logo-titulo img{ width: 7.5rem; height: auto; } /* ← en HTML sin width="rem" */
 
 .acciones{
   display: flex;
@@ -41,7 +41,7 @@ header{
   gap: 1.5rem;
 }
 
-/* Botones del header */
+/* Botones principales */
 .btnHeader{
   background: rgb(184,14,14);
   color: #fff;
@@ -49,14 +49,26 @@ header{
   font-weight: bold;
   font-size: 1.1rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,.2);
-  display: flex; align-items: center; justify-content: center;
-  padding: 0 2rem; height: 3rem; border-radius: 0.25rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 0 2rem; 
+  height: 3rem; 
+  border-radius: 0.25rem;
   transition: transform .3s ease-in-out, background-color .3s ease-in-out;
 }
-#funcionamiento:hover{ transform: scale(1.08); background: rgb(245,198,46); }
-#quienes:hover{        transform: scale(1.08); background: rgb(4,41,143);  }
 
-/* Carrito */
+#funcionamiento:hover{ 
+  background: rgb(245,198,46);
+  transform: scale(1.08); 
+}
+
+#quienes:hover{ 
+  background: rgb(4,41,143); 
+  transform: scale(1.08); 
+}
+
+/* Ícono del carrito */
 #chango{
   font-size: 2rem;
   padding: 0.7rem;
@@ -65,61 +77,47 @@ header{
   background: #fff;
   transition: transform 0.3s ease-in-out;
 }
-#chango:hover{ transform: scale(1.2); cursor: pointer; }
 
-/* === CATÁLOGO (Grid 3→2→1) === */
+#chango:hover{ 
+  transform: scale(1.2); 
+  cursor: pointer; 
+}
+
+/* Sección de muestra de productos */
 #muestras{
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 2rem;
-  border-radius: 1rem;
-
-  /* NO ocupa todo el ancho */
-  max-width: 70rem;  /* ~1120px */
-  width: 90%;
-  margin: 2rem auto;
-}
-#muestras > h2{
-  color: #111;
-  text-align: center;
-  margin: 0 0 3rem 0;
-}
-
-/* Grid simple, bidimensional */
-#muestras #container{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(15rem, 1fr));
-  gap: 2rem;
-  justify-items: center; /* centra cada celda */
-}
-
-#muestras #container img{
-  width: 100%;          /* que llene su celda */
-  max-width: 20rem;     /* tope visual cómodo */
-  height: auto;
-  display: block;
-  border-radius: .75rem;
-  box-shadow: 0.2rem 0.4rem 1.5rem black;
-  transition: transform 0.3s ease-in-out; /* ← hover intacto con scale */
-}
-#muestras #container img:hover{ transform: scale(1.2); }
-
-/* Responsive simple */
-@media (max-width: 56rem){ /* ~896px → 2 cols */
-  #muestras #container{ grid-template-columns: repeat(2, minmax(15rem, 1fr)); }
-}
-@media (max-width: 34rem){ /* ~544px → 1 col  */
-  #muestras #container{ grid-template-columns: 1fr; }
-}
-
-/* === ¿Qué es...? === */
-#queEs{
-  color: #111;
-  background: rgba(255,255,255,.85);
-  padding: 1rem 1.25rem;
+  background-color: rgba(255,255,255,0.6);
   border-radius: 1rem;
   max-width: 70rem;
   width: 90%;
   margin: 2rem auto;
+  padding: 2rem;
   text-align: center;
 }
 
+/* Grid responsivo para las imágenes */
+#muestras #container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+#muestras #container img{
+  max-width: 20rem;
+  border-radius: .75rem;
+  box-shadow: 0.2rem 0.4rem 1.5rem black;
+  transition: transform 0.3s;
+}
+
+#muestras #container img:hover{ 
+  transform: scale(1.2); 
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 56rem){
+  #muestras #container{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 34rem){
+  #muestras #container{ grid-template-columns: 1fr; }
+}
