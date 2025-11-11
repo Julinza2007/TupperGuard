@@ -1,44 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-  <link rel="icon" type="image/png" href="./img/iconoPagina.png" />
-  <title>TupperGuard</title>
-</head>
-<body>
-  <header>
-    <div class="logo-titulo">
-      <img src="./img/logoTupperGuard.png" alt="Logo TupperGuard" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Vinculaciones de estilos y recursos externos -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="icon" type="image/png" href="./img/iconoPagina.png" />
+    <title>TupperGuard</title>
+  </head>
+  <body>
+    <!-- HEADER: contiene el logo, los enlaces y el ícono del carrito -->
+    <header>
+      <div class="logo-titulo">
+        <img src="./img/logoTupperGuard.png" alt="Logo TupperGuard" />
+      </div>
+
+      <div class="acciones">
+        <!-- Botones de navegación -->
+        <a href="./quienesSomos.html" class="btnHeader" id="quienes">¿Quiénes somos?</a>
+        <a href="./funcionamiento.html" class="btnHeader" id="funcionamiento">Funcionamiento</a>
+        <!-- Ícono del carrito con evento JS -->
+        <i onclick="handleClick()" id="chango" class="fa-solid fa-cart-shopping"></i>
+      </div>
+    </header>
+
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="titulo">
+      <h1>TupperGuard</h1>
     </div>
 
-    <div class="acciones">
-      <a href="./quienesSomos.html" class="btnHeader" id="quienes">¿Quiénes somos?</a>
-      <a href="./funcionamiento.html" class="btnHeader" id="funcionamiento">Funcionamiento</a>
-      <i onclick="handleClick()" id="chango" class="fa-solid fa-cart-shopping"></i>
+    <!-- SECCIÓN DE MUESTRA DE PRODUCTOS -->
+    <div id="muestras">
+      <h2>Ofrecemos tuppers de excelente calidad</h2>
+        <div id="container">
+          <!-- Galería de imágenes de productos -->
+          <img src="./img/tupperNegro.png"  alt="tupper negro">
+          <img src="./img/tupperBlanco.png" alt="tupper blanco">
+          <img src="./img/tupperRojo.png"   alt="tupper rojo">
+          <img src="./img/tupperRosa.png"   alt="tupper rosa">
+          <img src="./img/tupperAzul.png"   alt="tupper azul">
+          <img src="./img/tupperVerde.png"  alt="tupper verde">
+        </div>
     </div>
-  </header>
 
-  <div class="titulo">
-    <h1>TupperGuard</h1>
-  </div>
-
-  <div id="muestras">
-    <h2>Ofrecemos tuppers de excelente calidad</h2>
-    <div id="container">
-      <img src="./img/tupperNegro.png"  alt="tupper negro">
-      <img src="./img/tupperBlanco.png" alt="tupper blanco">
-      <img src="./img/tupperRojo.png"   alt="tupper rojo">
-      <img src="./img/tupperRosa.png"   alt="tupper rosa">
-      <img src="./img/tupperAzul.png"   alt="tupper azul">
-      <img src="./img/tupperVerde.png"  alt="tupper verde">
-    </div>
-  </div>
-
-  <!-- <h2 id="queEs">¿Qué es TupperGuard?</h2> -->
-
-  <script src="./js/main.js"></script>
-</body>
+    <!-- Script principal -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>

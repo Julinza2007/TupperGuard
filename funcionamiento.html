@@ -1,98 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/funcionamiento.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-  <link rel="icon" type="image/png" href="./img/iconoPagina.png">
-  <title>Funcionamiento | TupperGuard</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS general y propio -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/funcionamiento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="./img/iconoPagina.png">
+    
+    <title>Funcionamiento</title>
+  </head>
 
-<body>
-  <!-- HEADER idéntico al index -->
-  <header>
-    <div class="logo-titulo">
-      <img src="./img/logoTupperGuard.png" alt="Logo TupperGuard">
-    </div>
-
-    <div class="acciones">
-      <a href="./quienesSomos.html" class="btnHeader" id="quienes">¿Quiénes somos?</a>
-      <a href="./index.html" class="btnHeader" id="producto">Seleccionar producto</a>
-    </div>
-  </header>
-
-  <!-- MASCOTA fija (decorativa) -->
-  <img onclick= "mostrarTuppy()" src="./img/Tuppy.png" alt="Mascota TupperGuard" id="tuppy">
-
-  <!-- CONTENIDO -->
-  <main>
-    <section class="intro">
-      <h1>¿Cómo funciona TupperGuard?</h1>
-      <p>
-        <strong>TupperGuard</strong> utiliza sensores de gases integrados en la tapa para analizar la frescura de los alimentos.
-        Cuando detecta niveles anormales, la tapa cambia de color para avisarte si el alimento está en condiciones seguras o no.
-      </p>
-    </section>
-
-    <!-- Pasos (Grid bidimensional) -->
-    <section class="pasos">
-      <article class="paso">
-        <div class="numero">1</div>
-        <h2>Detección de gases</h2>
-        <p>Los sensores captan los compuestos volátiles que liberan los alimentos al comenzar su deterioro.</p>
-      </article>
-
-      <article class="paso">
-        <div class="numero">2</div>
-        <h2>Procesamiento inteligente</h2>
-        <p>Un microcontrolador analiza los datos del sensor en tiempo real y determina el estado del alimento.</p>
-      </article>
-
-      <article class="paso">
-        <div class="numero">3</div>
-        <h2>Indicador luminoso</h2>
-        <p>Si el alimento está en buen estado, la tapa se ilumina en <span class="verde">verde</span>;
-           si detecta deterioro, cambia a <span class="rojo">rojo</span>.</p>
-      </article>
-
-      <article class="paso">
-        <div class="numero">4</div>
-        <h2>Notificación al usuario</h2>
-        <p>En los modelos avanzados, el sistema envía alertas al teléfono del usuario con el estado de los alimentos.</p>
-      </article>
-    </section>
-
-    <!-- Imágenes -->
-    <section class="imagenes-funcionamiento">
-      <div class="imagen">
-        <img src="./img/hamburguesa.png" alt="TupperGuard producto">
-        <p>Vista general del TupperGuard</p>
+  <body>
+    <!-- HEADER con logo y navegación -->
+    <header>
+      <div class="logo-titulo">
+        <img src="./img/logoTupperGuard.png" alt="Logo TupperGuard">
       </div>
-      <div class="imagen">
-        <img src="./img/luces.png" alt="Indicador">
-        <p>Indicador de calidad de alimentos</p>
+      <div class="acciones">
+        <a href="./quienesSomos.html" class="btnHeader" id="quienes">¿Quiénes somos?</a>
+        <a href="./index.html" class="btnHeader" id="producto">Seleccionar producto</a>
       </div>
-    </section>
+    </header>
 
-    <!-- Detalles + CTA -->
-    <section class="detalles">
-      <h2>Especificaciones técnicas</h2>
-      <ul>
-        <li>Sensores de gases calibrados de alta precisión.</li>
-        <li>Batería recargable con hasta 7 días de autonomía.</li>
-        <li>Plásticos aptos para alimentos, libres de BPA.</li>
-        <li>Indicadores LED RGB y conexión opcional con app móvil.</li>
-      </ul>
+    <!-- Imagen decorativa (mascota) -->
+    <img onclick="mostrarTuppy()" src="./img/Tuppy.png" alt="Mascota TupperGuard" id="tuppy">
 
-      <div class="cta-container">
-        <a href="./index.html" class="cta">Ver productos</a>
-        <a href="#" class="cta alt">Contactar soporte</a>
-      </div>
-    </section>
-  </main>
+    <main>
+      <!-- Introducción explicativa -->
+      <section class="intro">
+        <h1>¿Cómo funciona TupperGuard?</h1>
+        <p>TupperGuard analiza los gases de los alimentos y cambia de color según su estado.</p>
+      </section>
 
-  <script src="./js/main.js"></script>
-</body>
+      <!-- Cuatro pasos explicativos en grilla -->
+      <section class="pasos">
+        <article class="paso">
+          <div class="numero">1</div>
+          <h2>Detección de gases</h2>
+          <p>Los sensores captan los compuestos emitidos por los alimentos.</p>
+        </article>
+        <article class="paso">
+          <div class="numero">2</div>
+          <h2>Procesamiento inteligente</h2>
+          <p>El microcontrolador analiza los datos en tiempo real.</p>
+        </article>
+        <article class="paso">
+          <div class="numero">3</div>
+          <h2>Indicador luminoso</h2>
+          <p>La tapa se ilumina en verde o rojo según el estado.</p>
+        </article>
+        <article class="paso">
+          <div class="numero">4</div>
+          <h2>Notificación al usuario</h2>
+          <p>Envía alertas al teléfono del usuario.</p>
+        </article>
+      </section>
+
+      <!-- Imágenes ilustrativas -->
+      <section class="imagenes-funcionamiento">
+        <div class="imagen">
+          <img src="./img/hamburguesa.png" alt="TupperGuard producto">
+          <p>Vista general del TupperGuard</p>
+        </div>
+        <div class="imagen">
+          <img src="./img/luces.png" alt="Indicador">
+          <p>Indicador de calidad de alimentos</p>
+        </div>
+      </section>
+
+      <!-- Especificaciones técnicas + botones -->
+      <section class="detalles">
+        <h2>Especificaciones técnicas</h2>
+          <ul>
+            <li>Sensores de gases precisos</li>
+            <li>Batería recargable</li>
+            <li>Materiales aptos para alimentos</li>
+            <li>Conectividad con app móvil</li>
+          </ul>
+        <div class="cta-container">
+          <a href="./index.html" class="cta">Ver productos</a>
+          <a href="#" class="cta alt">Contactar soporte</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
 </html>

@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Indica que el documento es HTML5 -->
+    <meta charset="UTF-8"> <!-- Soporte para caracteres especiales (ñ, tildes, etc.) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que sea responsive -->
+    
+    <!-- Hojas de estilo: primero el CSS específico de la página, luego el general -->
     <link rel="stylesheet" href="./css/quienesSomos.css">
     <link rel="stylesheet" href="./css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link rel="icon" type="image/png" href="./img/signoPregunta.png">
+
+    <!-- Librería de íconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    <!-- Ícono que aparece en la pestaña del navegador -->
+    <link rel="icon" type="image/png" href="./img/iconoPagina.png">
+
+    <!-- Título de la página -->
     <title>¿Quiénes somos?</title>
 </head>
 
 <body>
+    <!-- ===== ENCABEZADO PRINCIPAL ===== -->
     <header>
+        <!-- Logo del proyecto -->
         <div class="logo-titulo">
             <img src="./img/logoTupperGuard.png" alt="logoTupperGuard">
         </div>
+
+        <!-- Título principal visible en la cabecera -->
         <h1>¿Quiénes somos?</h1>
+
+        <!-- Botones de navegación -->
         <div class="acciones">
             <a href="./index.html" class="btnHeader" id="producto">Seleccionar producto</a>
             <a href="./funcionamiento.html" class="btnHeader" id="funcionamiento">Funcionamiento</a>
         </div>
-    
     </header>
 
+    <!-- ===== CONTENIDO CENTRAL DE LA PÁGINA ===== -->
     <div class="contenido">
+        <!-- Cada párrafo explica distintos aspectos del proyecto -->
         <p>
             Somos <strong>Agustín Bruno</strong> e <strong>Ignacio Giménez</strong>, fundadores de <strong>FoodTech</strong>,
             una empresa dedicada al desarrollo de soluciones tecnológicas innovadoras aplicadas a la
@@ -61,19 +77,23 @@
         </p>
     </div>
 
+    <!-- ===== PIE DE PÁGINA ===== -->
     <footer>
         <div class="redes">
+            <!-- Enlaces a redes sociales y contacto -->
             <a href="https://www.instagram.com/" target="_blank">
                 <i class="fa-brands fa-instagram"></i> @TupperGuard
             </a>
+
             <a href="https://www.facebook.com/" target="_blank">
                 <i class="fa-brands fa-facebook"></i> /TupperGuardOficial
             </a>
+
+            <!-- Enlace telefónico con ícono de teléfono -->
             <a href="tel:+5491122334455">
                 <i class="fa-solid fa-phone"></i> +54 9 11 2233-4455
             </a>
         </div>
     </footer>
-
 </body>
 </html>
