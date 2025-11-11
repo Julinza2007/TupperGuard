@@ -54,37 +54,37 @@ function mostrarTuppy() {
     grid.className = 'comparacion-grid';
 
     // --- Tarjeta: BUENA ---
-    let itemBuena = document.createElement('div');
-    itemBuena.className = 'comparacion-item';
+    let divBuena = document.createElement('div');
+    divBuena.className = 'comparacion-div';
 
     let imgBuena = document.createElement('img');
     imgBuena.src = './img/hamburguesa.png';   // buen estado
     imgBuena.alt = 'Comida en buen estado';
 
-    let labelBuena = document.createElement('p');
+    let pBuena = document.createElement('p');
     let ledVerde = document.createElement('span');
     ledVerde.className = 'led led-verde';
-    labelBuena.append(ledVerde, 'BUENA');
+    pBuena.append(ledVerde, 'BUENA');
 
-    itemBuena.append(imgBuena, labelBuena);
+    divBuena.append(imgBuena, pBuena);
 
     // --- Tarjeta: VENCIDA ---
-    let itemVencida = document.createElement('div');
-    itemVencida.className = 'comparacion-item';
+    let divVencida = document.createElement('div');
+    divVencida.className = 'comparacion-div';
 
     let imgVencida = document.createElement('img');
     imgVencida.src = './img/malEstado.png';   // mal estado
     imgVencida.alt = 'Comida en mal estado';
 
-    let labelVencida = document.createElement('p');
+    let pVencida = document.createElement('p');
     let ledRoja = document.createElement('span');
     ledRoja.className = 'led led-roja';
-    labelVencida.append(ledRoja, 'VENCIDA');
+    pVencida.append(ledRoja, 'VENCIDA');
 
-    itemVencida.append(imgVencida, labelVencida);
+    divVencida.append(imgVencida, pVencida);
 
     // Armar todo
-    grid.append(itemBuena, itemVencida);
+    grid.append(divBuena, divVencida);
     panel.append(header, grid);
     overlay.append(panel);
     document.body.append(overlay);

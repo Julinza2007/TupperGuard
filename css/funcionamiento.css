@@ -128,7 +128,7 @@ main{
 
 /* Especificaciones técnicas y botones */
 .detalles{
-  background: rgba(255,255,255,.3);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,.3);
@@ -156,18 +156,18 @@ main{
 }
 
 .cta{
-  background: rgb(184,14,14);
+  background: rgb(184, 14, 14);
   color:#fff; 
   text-decoration:none; 
-  font-weight:700;
+  font-weight: 700;
   padding: 1rem 2rem; 
   border-radius: 1rem;
-  transition: transform .3s ease-in-out, background-color .3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .cta:hover{ 
   transform: scale(1.1); 
-  background: rgb(150,10,10); 
+  background: rgb(150, 10, 10); 
 }
 
 /* Versión alternativa del botón */
@@ -179,8 +179,8 @@ main{
 #comparacion{
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,.6);
-  display: none;                 /* se enciende desde JS */
+  background: rgba(0, 0, 0, 0.6);
+  display: none;                 /* no se muestra ya que arranca desde el JS*/
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
@@ -235,7 +235,7 @@ main{
 }
 
 /* Tarjetitas */
-.comparacion-item{
+.comparacion-div{
   background: rgba(0,0,0,.05);
   border-radius: .75rem;
   padding: 0.75rem;
@@ -243,7 +243,7 @@ main{
   box-shadow: 0 .25rem 1rem rgba(0,0,0,.15);
 }
 
-.comparacion-item img{
+.comparacion-div img{
   width: 100%;
   max-width: 320px;
   height: auto;
@@ -253,11 +253,11 @@ main{
   margin: 0 auto .5rem;
 }
 
-.comparacion-item img:hover{
+.comparacion-div img:hover{
   transform: scale(1.03);
 }
 
-.comparacion-item p{
+.comparacion-div p{
   margin: .25rem 0 0;
   font-weight: 700;
   display: inline-flex;
@@ -286,37 +286,12 @@ main{
 }
 
 
-/*
-
-@media (min-width: 1400px) and (max-width: 1440px) and (max-height: 900px) {
-  main {
-    max-width: none;
-    width: 100%;  
-  }
-}
-
-@media (min-width: 1366px) and (max-width: 1366px) and (max-height: 768px) {
-  main {
-    max-width: none;
-    width: 100%;  
-  }
-}
-
-@media (min-width: 1280px) and (max-width: 1366px) and (max-height: 720px) {
-  main {
-    max-width: none;
-    width: 100%;  
-  }
-}
-
-*/
-
-/* 2 × 2 a 1280px o menos */
+/* 2 × 2 a 1280px hasta 801px */
 @media (max-width: 1280px) and (min-width: 801px){
   .pasos{
     display: grid;
     grid-template-columns: repeat(2, minmax(280px, 1fr));
-    gap: 2rem;               /* mantené tu separación */
+    gap: 2rem;               
   }
 }
 
